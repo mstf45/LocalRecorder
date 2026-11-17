@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <Platform>x64</Platform>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+</PropertyGroup>
+
+<ItemGroup>
+  <Resource Include="Assets\app.png" />
+</ItemGroup>
+
+<Target Name="KeepScreenRecorderBesideExe" AfterTargets="ResolveAssemblyReferences">
+  <ItemGroup>
+    <ReferenceCopyLocalPaths Update="@(ReferenceCopyLocalPaths)" Condition="'%(Filename)' == 'ScreenRecorderLib'">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </ReferenceCopyLocalPaths>
+  </ItemGroup>
+</Target>
+
+  <ItemGroup>
+    <PackageReference Include="ScreenRecorderLib" Version="7.0.1" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+</Project>

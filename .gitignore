@@ -1,0 +1,44 @@
+# Derleme çıktıları
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+artifacts/
+publish/
+
+# Yerel kurulum ve yayın ikilileri
+dist/
+LocalRecorder-Kurulum.exe
+installer/*.exe
+installer/*.dll
+
+# Visual Studio
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+
+# Rider / VS Code
+.idea/
+*.sln.iml
+
+# İşletim sistemi
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Günlükler
+*.log
+*.tlog
